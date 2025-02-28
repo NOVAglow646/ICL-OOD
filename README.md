@@ -1,2 +1,2 @@
-# ICL-OOD
-Official code of our ICLR 2025 paper "Can In-context Learning Really Generalize to Out-of-distribution Tasks?"
+# Coming soon
+We are expediting the code and expect to release it in 2~3 weeks.
