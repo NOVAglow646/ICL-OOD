@@ -10,7 +10,7 @@ conda activate in-context-learning
 
 # Directly reproduce the experiments
 ## Reproduce Fig. 1,3,4,5,7 (GPT-2 experiments)
-Please see eval_multi_curve.ipynb.
+Please see `eval_multi_curve.ipynb`.
 
 ## Reproduce Fig. 2,6,8,7 (LLM experiments)
 Coming soon.
