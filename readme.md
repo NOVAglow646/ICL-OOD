@@ -19,6 +19,8 @@ Coming soon.
 ## Training
 
 ```bash
+cd ICL-OOD/src
+conda activate in-context-learning
 python train.py --config conf/linear_regression.yaml
 ```
 
@@ -27,6 +29,8 @@ The trained model weights will be saved to `./results/trained_ckpt_and_eval_resu
 ## Evaluation
 
 ```bash
+cd ICL-OOD/src
+conda activate in-context-learning
 python -m eval_ood_task --pretrain_path ./results/trained_ckpt_and_eval_results/linear_regression/[random-id-generated-by-your-system] \
     --ood_task quadratic_regression --device cuda:5 --n_context_test 101
 ```
