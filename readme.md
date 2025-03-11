@@ -43,7 +43,7 @@ We also maintain the raw evaluation results of some other function classes in `.
 # Cite this work
 If you find this work useful, please cite the accompanying paper:
 
-<pre><code>@inproceedings{wang2022improving,
+<pre><code>@inproceedings{wang2025can,
   title={Can In-context Learning Really Generalize to Out-of-distribution Tasks?},
   author={Wang, Qixun and Wang, Yifei and Ying, Xianghua and Wang, Yisen},
   booktitle={ICLR},
