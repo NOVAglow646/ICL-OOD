@@ -1,0 +1,20 @@
+inherit: 
+    - ../base_keep_dim.yaml
+# must keep the `self._read_out_after_keep_dim` of the transformer model
+training:
+    task: multi_task
+    multi_tasks: ['linear_regression', 'quadratic']
+    data: multi_data
+    multi_datas: ['gaussian_quadratic', 'gaussian']
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:4
+
+out_dir: ../results/trained_ckpt_and_eval_results/linear_regression+quadratic
+
+wandb:
+    name: "linear_regression+quadratic_standard"

@@ -1,0 +1,25 @@
+inherit: 
+    - base_linear_regression_random_mapping.yaml
+
+training:
+    task: linear_regression_random_mapping
+    #task_kwargs: {"num_classes": 10} # quantize the continuous output of linear regression into how many discrete values
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:3
+
+out_dir: ../results/trained_ckpt_and_eval_results/linear_regression_random_mapping_scale0.4_shift100-5000
+
+wandb:
+    name: "linear_regression_random_mapping_scale0.4_shift100-5000"
+
+#model:
+#    num_classes: 10
+
+# linear_regression_random_mapping: 70 classes
+# linear_regression_random_mapping_20classes 0.3
+# linear_regression_random_mapping_10classes 0.1

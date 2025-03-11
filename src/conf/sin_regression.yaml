@@ -1,0 +1,17 @@
+inherit: 
+    - base_large.yaml
+
+training:
+    task: sin_regression
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:0
+
+out_dir:  ../results/trained_ckpt_and_eval_results/sin_regression_gpt2-large1_lr0.0005
+
+wandb:
+    name: "sin_regression_standard_gpt2-large1_lr0.0005"

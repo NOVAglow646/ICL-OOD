@@ -1,0 +1,18 @@
+inherit: 
+    - base_keep_dim.yaml
+
+training:
+    task: linear_regression_keep_dim
+    task_kwargs: {"rank": 7}
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:4
+
+out_dir: ../results/trained_ckpt_and_eval_results/linear_regression_keep_dim_rank7
+
+wandb:
+    name: "linear_regression_keep_dim_rank7_standard"

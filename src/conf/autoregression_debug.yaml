@@ -1,0 +1,33 @@
+inherit: 
+    - autoregression_base.yaml
+
+training:
+    task: autoregression
+    curriculum:
+        points:
+            start: 11
+            end: 21
+            inc: 2
+            interval: 4000
+    device: cuda:1
+    data_sampler_kwargs:
+        n_embedding:
+            x: 30 # vocabulary size of X tokens
+            irrelevant: 3 # vocabulary size of irrelevant tokens
+            task: 1000 # vocabulary size of task tokens, (which is also the number of task functions of each task)
+        x_y_order: random # the order of X and Y tokens
+        add_task_tokens: False
+        n_start_tokens: 3 # how many kinds of tokens are allow to be used as staring tokens
+        finite_start_tokens: False # whether to use finite tokens as starting tokens
+        task_list: ["scalar_projection"]
+        min_out_degree: 1
+        max_out_degree: 2
+        x_add_ratio: 0.8
+        y_add_ratio: 0.8 # experiments before 6.30: 0.4  #now: ~0.16, ~0.3  #ori: X~0.14, Y~0.20 
+
+
+
+out_dir: ../results/trained_ckpt_and_eval_results/ARdebug
+
+wandb:
+    name: "ARdebug"

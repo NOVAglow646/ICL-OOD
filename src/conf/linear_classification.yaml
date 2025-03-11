@@ -1,0 +1,17 @@
+inherit: 
+    - base.yaml
+
+training:
+    task: linear_classification
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:0
+
+out_dir: ..results/trained_ckpt_and_eval_results/linear_classification
+
+wandb:
+    name: "linear_classification_standard"

@@ -1,0 +1,18 @@
+inherit: 
+    - base.yaml
+
+training:
+    task: linear_regression_diversity
+    task_kwargs: {"num_pretraining_tasks": 1000} # how many classes can be classified in total
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:3
+
+out_dir: ../results/trained_ckpt_and_eval_results/linear_regression_diversity_1000tasks
+
+wandb:
+    name: "linear_regression_diversity_1000tasks_standard"

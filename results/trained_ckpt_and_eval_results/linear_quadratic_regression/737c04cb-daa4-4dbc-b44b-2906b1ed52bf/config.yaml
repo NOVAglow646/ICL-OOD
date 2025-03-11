@@ -1,0 +1,57 @@
+config: conf/linear_quadratic_regression.yaml
+inherit:
+- /data1/qxwang/codes/in-context-learning/src/conf/base.yaml
+model:
+  family: gpt2
+  n_dims: 20
+  n_embd: 256
+  n_head: 8
+  n_layer: 12
+  n_positions: 101
+out_dir: /data3/qxwang/checkpoints/icl-garg-checkpoints/linear_quadratic_regression/737c04cb-daa4-4dbc-b44b-2906b1ed52bf
+test_run: false
+training:
+  batch_size: 64
+  curriculum:
+    dims:
+      end: 20
+      inc: 1
+      interval: 2000
+      start: 5
+    points:
+      end: 101
+      inc: 2
+      interval: 2000
+      start: 11
+  data: gaussian
+  data_sampler_kwargs:
+    add_task_tokens: false
+    finite_start_tokens: false
+    max_out_degree: 3
+    min_out_degree: 1
+    n_embedding:
+      irrelevant: 10
+      task: 5
+      x: 100
+    n_start_tokens: 3
+    task_list: []
+    x_add_ratio: 0.4
+    x_y_order: random
+    y_add_ratio: 0.4
+  device: cuda:7
+  keep_every_steps: 100000
+  learning_rate: 0.0001
+  num_tasks: null
+  num_training_examples: null
+  ood_task: linear_regression
+  resume_id: null
+  save_every_steps: 1000
+  task: linear_quadratic_regression
+  task_kwargs: {}
+  train_steps: 500001
+wandb:
+  entity: qixunwang-pku
+  log_every_steps: 100
+  name: linear_quadratic_regression_standard
+  notes: ''
+  project: in-context-training

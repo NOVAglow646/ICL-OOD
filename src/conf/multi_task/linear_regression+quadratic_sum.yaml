@@ -1,0 +1,18 @@
+inherit: 
+    - ../base.yaml
+
+training:
+    task: multi_task
+    multi_tasks: ['linear_regression', 'quadratic_sum']
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:0
+
+out_dir: ../results/trained_ckpt_and_eval_results/linear_regression+quadratic_sum
+
+wandb:
+    name: "linear_regression+quadratic_sum_standard"

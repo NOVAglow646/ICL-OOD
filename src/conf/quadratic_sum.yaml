@@ -1,0 +1,17 @@
+inherit: 
+    - base.yaml
+
+training:
+    task: quadratic_sum
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:8
+
+out_dir: ../results/trained_ckpt_and_eval_results/quadratic_sum
+
+wandb:
+    name: "quadratic_sum_standard"

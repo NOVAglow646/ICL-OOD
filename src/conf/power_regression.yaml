@@ -1,0 +1,19 @@
+inherit: 
+    - base_pos_gaussian.yaml
+
+training:
+    task: power_regression
+    task_kwargs: {"powers": [2.4]}
+    curriculum:
+        points:
+            start: 11
+            end: 101
+            inc: 2
+            interval: 2000
+    device: cuda:4
+
+out_dir: ../results/trained_ckpt_and_eval_results/power_regression_2.4
+
+wandb:
+    name: "power_regression_2.4"
+    #"power_regression_1.8-1.9-2.1-2.2"

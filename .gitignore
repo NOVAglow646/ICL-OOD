@@ -1,0 +1,16 @@
+/src/__pycache__/
+/src/args/
+/src/conf/autoregression/
+/src/conf/autoregression_word_embeddings/
+/src/visualization_analysis/
+/src/eval_multi_task.ipynb
+/src/eval.ipynb
+/src/fit_model_prediction.py
+/src/generate_embeddings.py
+/src/shi.py
+/src/shi2.py
+/results/ood_tasks/
+/results/prediction_analysis/
+/results/saved_predictions/
+/results/visualization/
+**/wandb/*
