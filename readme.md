@@ -1,6 +1,3 @@
-<pre><code>@inproceedings{wang2025can,
-  title=
-
 ## 📕Introduction
 
 This is the official implementation of ICLR 2025 paper "Can In-context Learning Really Generalize to Out-of-distribution Tasks?"
