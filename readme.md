@@ -7,9 +7,7 @@ This is the official implementation of ICLR 2025 paper "Can In-context Learning 
     <img src="https://img.shields.io/badge/Arxiv-Paper-red?logo=arxiv">
   </a>
 
-<img src="D:\Documemts\submissions\ICLR 2025\code\in-context-learning2025.3.11\in-context-learning\images\1.png" style="zoom:50%;" />
-
-
+<img src="images/1.png" style="zoom:50%;" />
 
 ## ⭐Takeaways of this paper
 
